@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Котик: Магазинчик</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <div class="cat-avatar" id="catFace">🐱</div>
+    <h1 id="gameTitle">Мур-мяу! Помоги котику с магазином!</h1>
+    
+    <div class="task-description" id="taskText">
+        <b>Задание 1:</b> Котик открыл лавку и хочет создать таблицу для товаров. Напиши SQL-команду <code>CREATE TABLE products</code> с полями <code>id</code>, <code>product_name</code> и <code>price</code>.
+    </div>
+
+    <!-- Интерактивная таблица базы данных -->
+    <div class="table-box">
+        <strong id="tableNameTitle">Таблица: пуста</strong>
+        <div class="table-responsive">
+            <table id="dbTable">
+                <thead id="tableHeader"></thead>
+                <tbody id="dbTableBody">
+                    <tr><td colspan="3" class="empty-msg">Таблица еще не создана 🐾</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Поле для ввода SQL-кода -->
+    <textarea id="sqlInput" placeholder="Введи SQL запрос здесь..."></textarea>
+    <br>
+    <button onclick="checkSql()">Выполнить запрос 🚀</button>
+
+    <div id="message"></div>
+    <button id="resetBtn" class="reset-btn" style="display:none;" onclick="resetGame()">Начать сначала 🌸</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
